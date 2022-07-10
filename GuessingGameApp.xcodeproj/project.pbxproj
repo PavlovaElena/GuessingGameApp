@@ -13,10 +13,12 @@
 		DB177B532866CB840001E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB177B512866CB840001E0E1 /* Main.storyboard */; };
 		DB177B552866CB870001E0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB177B542866CB870001E0E1 /* Assets.xcassets */; };
 		DB177B582866CB870001E0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB177B562866CB870001E0E1 /* LaunchScreen.storyboard */; };
-		DB177B642867639E0001E0E1 /* UserGuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B632867639E0001E0E1 /* UserGuessingGameViewController.swift */; };
-		DB177B66286763CB0001E0E1 /* ComputerGuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B65286763CB0001E0E1 /* ComputerGuessingGameViewController.swift */; };
+		DB177B642867639E0001E0E1 /* ComputerGuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B632867639E0001E0E1 /* ComputerGuessingGameViewController.swift */; };
+		DB177B66286763CB0001E0E1 /* UserGuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */; };
 		DB177B68286763EA0001E0E1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B67286763EA0001E0E1 /* ResultViewController.swift */; };
 		DB177B6B286835340001E0E1 /* GameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B6A286835340001E0E1 /* GameOptions.swift */; };
+		DB177B6E28752AD20001E0E1 /* Extention + IUAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */; };
+		DB2DC8AE287AA971008E6EB4 /* Extention + UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		DB177B542866CB870001E0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB177B572866CB870001E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB177B592866CB870001E0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB177B632867639E0001E0E1 /* UserGuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessingGameViewController.swift; sourceTree = "<group>"; };
-		DB177B65286763CB0001E0E1 /* ComputerGuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessingGameViewController.swift; sourceTree = "<group>"; };
+		DB177B632867639E0001E0E1 /* ComputerGuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessingGameViewController.swift; sourceTree = "<group>"; };
+		DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessingGameViewController.swift; sourceTree = "<group>"; };
 		DB177B67286763EA0001E0E1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		DB177B6A286835340001E0E1 /* GameOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptions.swift; sourceTree = "<group>"; };
+		DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + IUAlertController.swift"; sourceTree = "<group>"; };
+		DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + UITextField.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				DB177B4F2866CB840001E0E1 /* EnterNumberViewController.swift */,
-				DB177B632867639E0001E0E1 /* UserGuessingGameViewController.swift */,
-				DB177B65286763CB0001E0E1 /* ComputerGuessingGameViewController.swift */,
+				DB177B632867639E0001E0E1 /* ComputerGuessingGameViewController.swift */,
+				DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */,
 				DB177B67286763EA0001E0E1 /* ResultViewController.swift */,
+				DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */,
+				DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,10 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB177B642867639E0001E0E1 /* UserGuessingGameViewController.swift in Sources */,
+				DB177B642867639E0001E0E1 /* ComputerGuessingGameViewController.swift in Sources */,
+				DB177B6E28752AD20001E0E1 /* Extention + IUAlertController.swift in Sources */,
 				DB177B502866CB840001E0E1 /* EnterNumberViewController.swift in Sources */,
-				DB177B66286763CB0001E0E1 /* ComputerGuessingGameViewController.swift in Sources */,
+				DB177B66286763CB0001E0E1 /* UserGuessingGameViewController.swift in Sources */,
 				DB177B4C2866CB840001E0E1 /* AppDelegate.swift in Sources */,
+				DB2DC8AE287AA971008E6EB4 /* Extention + UITextField.swift in Sources */,
 				DB177B6B286835340001E0E1 /* GameOptions.swift in Sources */,
 				DB177B4E2866CB840001E0E1 /* SceneDelegate.swift in Sources */,
 				DB177B68286763EA0001E0E1 /* ResultViewController.swift in Sources */,
