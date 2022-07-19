@@ -33,9 +33,9 @@ class EnterNumberViewController: UIViewController {
             return
         }
         
-        userNumber >= 1 && userNumber <= 100
+        userNumber >= minValue && userNumber <= maxValue
         ? gameOption.userNumber = userNumber
-        : showAlert(withMessage: "Please enter a number from 0 to 100")
+        : showAlert(withMessage: "Please enter a number from \(minValue) to \(maxValue)")
     }
     
     @objc private func editingChanged() {
