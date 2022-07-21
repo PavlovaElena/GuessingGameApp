@@ -10,51 +10,57 @@ import UIKit
 class ComputerGuessingGameViewController: UIViewController {
     
     @IBOutlet weak var computerQuestionLabel: UILabel!
-    @IBOutlet weak var triesCountLabel: UILabel!
+    @IBOutlet weak var tryNumberLabel: UILabel!
     
-    var gameOption: GameOptions!
+    var gameOptions: GameOptions!
     
-    private var countingComputerAttempts = 1
-    private var minPoint = 1
-    private var maxPoint = 100
+    private var computerTriesCounter = 1
+    private var minPoint = minValue
+    private var maxPoint = maxValue
     private var median: Int {
         minPoint + (maxPoint - minPoint) / 2
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabels()
+        tryNumberLabel.text = "Try № \(computerTriesCounter)"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setComputerGuess()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userGuessingGameVC = segue.destination as? UserGuessingGameViewController else { return }
-        userGuessingGameVC.gameOption = gameOption
+        userGuessingGameVC.gameOptions = gameOptions
+        userGuessingGameVC.computerTriesCounter = computerTriesCounter
     }
     
-    @IBAction func userAnswerButton(_ sender: UIButton) {
+    @IBAction func userAnswerButtonPressed(_ sender: UIButton) {
         switch sender.tag {
-        case 0:
-            gameOption.userNumber < median
-            ? maxPoint = median - 1
-            : showAlert(withMessage: "You guessed a number greater than this")
-        case 1:
-            gameOption.userNumber == median
-            ? performSegue(withIdentifier: "showUserGuessing", sender: nil)
-            : showAlert(withMessage: "You guessed another number")
+        case 0 where gameOptions.userNumber < median:
+            maxPoint = median - 1
+        case 1 where gameOptions.userNumber == median:
+            performSegue(withIdentifier: "showUserGuessing", sender: nil)
+            return
+        case 2 where gameOptions.userNumber > median:
+            minPoint = median + 1
         default:
-            gameOption.userNumber > median
-            ? minPoint = median + 1
-            : showAlert(withMessage: "You guessed a number less than this")
+            showAlert(withMessage: "Check if the answer is correct")
+            return
         }
         
-        countingComputerAttempts += 1
-        setLabels()
+        computerTriesCounter += 1
+        tryNumberLabel.text = "Try № \(computerTriesCounter)"
+        
+        setComputerGuess()
     }
     
-    @IBAction func showNumber() {
+    @IBAction func remindButtonPressed() {
         let alert = UIAlertController.createAlertController(
             title: "Oops",
-            message: "You guessed the number \(gameOption.userNumber)"
+            message: "You guessed the number \(gameOptions.userNumber)"
         )
         present(alert, animated: true)
     }
@@ -67,8 +73,8 @@ class ComputerGuessingGameViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func setLabels() {
-        triesCountLabel.text = "Try № \(countingComputerAttempts)"
-        computerQuestionLabel.text = "Your number is - \(median)?"
+    private func setComputerGuess() {
+        computerQuestionLabel.text = ""
+        computerQuestionLabel.animation(typing: "Your number is - \(median)?")
     }
 }

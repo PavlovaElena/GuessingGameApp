@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Enter Number View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EnterNumberViewController" customModule="GuessingGameApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="GuessingGameApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="M9w-rp-uDQ">
-                                <rect key="frame" x="111.66666666666667" y="203.66666666666666" width="190.66666666666663" height="72.333333333333343"/>
+                                <rect key="frame" x="111.66666666666667" y="203.33333333333334" width="190.66666666666663" height="72.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try №" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsQ-S8-HXs">
                                         <rect key="frame" x="65.999999999999986" y="0.0" width="58.666666666666671" height="26.333333333333332"/>
@@ -143,21 +143,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer is guessing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-Hj-twK">
-                                        <rect key="frame" x="0.0" y="48.333333333333343" width="190.66666666666666" height="24"/>
+                                        <rect key="frame" x="0.0" y="48.333333333333314" width="190.66666666666666" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your number is - ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSU-EK-BZ6">
-                                <rect key="frame" x="127.33333333333333" y="436" width="159.33333333333337" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSU-EK-BZ6">
+                                <rect key="frame" x="187.33333333333334" y="435.66666666666669" width="39.666666666666657" height="25"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DlC-9f-cTT">
-                                <rect key="frame" x="113" y="540" width="188" height="93"/>
+                                <rect key="frame" x="113" y="540.66666666666663" width="188" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My number is ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpY-um-PlY">
                                         <rect key="frame" x="0.0" y="0.0" width="143.66666666666666" height="24"/>
@@ -182,7 +182,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="userAnswerButton:" destination="d5y-br-qsQ" eventType="touchUpInside" id="TRk-8E-l5n"/>
+                                                    <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="mVd-w0-P56"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVt-pj-Dcu">
@@ -199,7 +199,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="userAnswerButton:" destination="d5y-br-qsQ" eventType="touchUpInside" id="BfP-er-ziv"/>
+                                                    <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="pNZ-bt-8ua"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-DC-99K">
@@ -216,7 +216,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="userAnswerButton:" destination="d5y-br-qsQ" eventType="touchUpInside" id="6LU-Nd-566"/>
+                                                    <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="e6S-ce-8Cm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -225,14 +225,14 @@
                                 <variation key="heightClass=compact-widthClass=compact" spacing="15"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPz-cH-pSz">
-                                <rect key="frame" x="107" y="683" width="200" height="31"/>
+                                <rect key="frame" x="107" y="683.66666666666663" width="200" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="hKS-bs-nkX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Remind the number"/>
                                 <connections>
-                                    <action selector="showNumber" destination="d5y-br-qsQ" eventType="touchUpInside" id="y99-gd-TJY"/>
+                                    <action selector="remindButtonPressed" destination="d5y-br-qsQ" eventType="touchUpInside" id="YrD-2T-TLd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,7 +263,7 @@
                     </view>
                     <connections>
                         <outlet property="computerQuestionLabel" destination="GSU-EK-BZ6" id="39x-mM-LLm"/>
-                        <outlet property="triesCountLabel" destination="jsQ-S8-HXs" id="VPP-CQ-pCB"/>
+                        <outlet property="tryNumberLabel" destination="jsQ-S8-HXs" id="VPP-CQ-pCB"/>
                         <segue destination="kZh-CL-6TC" kind="presentation" identifier="showUserGuessing" modalPresentationStyle="fullScreen" id="Crc-bE-gQm"/>
                     </connections>
                 </viewController>
@@ -329,9 +329,9 @@
                                     <constraint firstAttribute="width" constant="200" id="uZF-wW-2sq"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPt-3d-RH2">
-                                <rect key="frame" x="20" y="601.66666666666663" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPt-3d-RH2">
+                                <rect key="frame" x="20" y="601.66666666666663" width="374" height="25"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -357,52 +357,52 @@
                     <connections>
                         <outlet property="computerResponseLabel" destination="JPt-3d-RH2" id="B5F-QH-Vh2"/>
                         <outlet property="guessButton" destination="4X8-Fs-BVF" id="egS-XW-3VY"/>
-                        <outlet property="triesCountLabel" destination="36a-ez-w4R" id="7Dv-4Q-1uJ"/>
+                        <outlet property="tryNumberLabel" destination="36a-ez-w4R" id="7Dv-4Q-1uJ"/>
                         <outlet property="userGuessTextField" destination="dSB-ue-8Bz" id="UMi-f9-NHr"/>
                         <segue destination="rF1-e7-OoX" kind="presentation" identifier="showResult" modalPresentationStyle="fullScreen" id="2rj-R8-don"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEU-GS-OCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="106"/>
+            <point key="canvasLocation" x="2367" y="103"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="icC-Ik-4RP">
             <objects>
-                <viewController id="rF1-e7-OoX" customClass="ResultViewController" customModule="GuessingGameApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultVC" id="rF1-e7-OoX" customClass="ResultViewController" customModule="GuessingGameApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kka-9n-JGa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siE-yO-HsQ">
-                                <rect key="frame" x="168.66666666666666" y="199" width="77" height="28.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="167" y="192" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-7M-VBw">
-                                <rect key="frame" x="63" y="377.66666666666669" width="288" height="141.00000000000006"/>
+                                <rect key="frame" x="63" y="372" width="288" height="152"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-s9-nFb">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="60.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="68"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your's tries count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1O-SW-g32">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer's tries count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-2x-n8J">
-                                                <rect key="frame" x="0.0" y="40.333333333333314" width="179.33333333333334" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="44" width="205.66666666666666" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-ij-7w8">
-                                        <rect key="frame" x="0.0" y="120.66666666666661" width="288" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-ij-7w8">
+                                        <rect key="frame" x="0.0" y="128" width="288" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -412,7 +412,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-K2-shU">
-                                <rect key="frame" x="132" y="618.66666666666663" width="150" height="38"/>
+                                <rect key="frame" x="132" y="624" width="150" height="38"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="D0d-rN-kDR"/>
@@ -428,7 +428,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="exitButtonPressed" destination="rF1-e7-OoX" eventType="touchUpInside" id="jSb-SE-b8x"/>
+                                    <segue destination="pAK-AM-sxs" kind="unwind" unwindAction="unwindFor:" id="esI-DG-stz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -459,8 +459,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzC-5v-eV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pAK-AM-sxs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3110.625" y="105.63380281690141"/>
+            <point key="canvasLocation" x="3103" y="105"/>
         </scene>
     </scenes>
     <resources>

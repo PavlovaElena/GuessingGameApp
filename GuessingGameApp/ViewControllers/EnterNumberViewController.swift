@@ -12,7 +12,7 @@ class EnterNumberViewController: UIViewController {
     @IBOutlet weak var userNumberTF: UITextField!
     @IBOutlet weak var enterTheNumberButton: UIButton!
     
-    private var gameOption = GameOptions.getGameOptions()
+    private var gameOptions = GameOptions.getGameOptions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class EnterNumberViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let computerGuessingGameVC = segue.destination as? ComputerGuessingGameViewController else { return }
-        computerGuessingGameVC.gameOption = gameOption
+        computerGuessingGameVC.gameOptions = gameOptions
     }
     
     @IBAction func enterTheNumberPressed() {
@@ -34,7 +34,7 @@ class EnterNumberViewController: UIViewController {
         }
         
         userNumber >= minValue && userNumber <= maxValue
-        ? gameOption.userNumber = userNumber
+        ? gameOptions.userNumber = userNumber
         : showAlert(withMessage: "Please enter a number from \(minValue) to \(maxValue)")
     }
     

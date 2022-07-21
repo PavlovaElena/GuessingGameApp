@@ -17,8 +17,10 @@
 		DB177B66286763CB0001E0E1 /* UserGuessingGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */; };
 		DB177B68286763EA0001E0E1 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B67286763EA0001E0E1 /* ResultViewController.swift */; };
 		DB177B6B286835340001E0E1 /* GameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B6A286835340001E0E1 /* GameOptions.swift */; };
-		DB177B6E28752AD20001E0E1 /* Extention + IUAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */; };
-		DB2DC8AE287AA971008E6EB4 /* Extention + UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */; };
+		DB177B6E28752AD20001E0E1 /* Extension + IUAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB177B6D28752AD20001E0E1 /* Extension + IUAlertController.swift */; };
+		DB2DC8AE287AA971008E6EB4 /* Extension + UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DC8AD287AA971008E6EB4 /* Extension + UITextField.swift */; };
+		DB2DC8B0287D018E008E6EB4 /* Extension + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DC8AF287D018E008E6EB4 /* Extension + UILabel.swift */; };
+		DB2DC8B2287E5FBF008E6EB4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2DC8B1287E5FBF008E6EB4 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuessingGameViewController.swift; sourceTree = "<group>"; };
 		DB177B67286763EA0001E0E1 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		DB177B6A286835340001E0E1 /* GameOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptions.swift; sourceTree = "<group>"; };
-		DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + IUAlertController.swift"; sourceTree = "<group>"; };
-		DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + UITextField.swift"; sourceTree = "<group>"; };
+		DB177B6D28752AD20001E0E1 /* Extension + IUAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + IUAlertController.swift"; sourceTree = "<group>"; };
+		DB2DC8AD287AA971008E6EB4 /* Extension + UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITextField.swift"; sourceTree = "<group>"; };
+		DB2DC8AF287D018E008E6EB4 /* Extension + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UILabel.swift"; sourceTree = "<group>"; };
+		DB2DC8B1287E5FBF008E6EB4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +93,14 @@
 		DB177B602866CBA60001E0E1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB2DC8B1287E5FBF008E6EB4 /* StartViewController.swift */,
 				DB177B4F2866CB840001E0E1 /* EnterNumberViewController.swift */,
 				DB177B632867639E0001E0E1 /* ComputerGuessingGameViewController.swift */,
 				DB177B65286763CB0001E0E1 /* UserGuessingGameViewController.swift */,
 				DB177B67286763EA0001E0E1 /* ResultViewController.swift */,
-				DB177B6D28752AD20001E0E1 /* Extention + IUAlertController.swift */,
-				DB2DC8AD287AA971008E6EB4 /* Extention + UITextField.swift */,
+				DB177B6D28752AD20001E0E1 /* Extension + IUAlertController.swift */,
+				DB2DC8AD287AA971008E6EB4 /* Extension + UITextField.swift */,
+				DB2DC8AF287D018E008E6EB4 /* Extension + UILabel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,12 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2DC8B0287D018E008E6EB4 /* Extension + UILabel.swift in Sources */,
 				DB177B642867639E0001E0E1 /* ComputerGuessingGameViewController.swift in Sources */,
-				DB177B6E28752AD20001E0E1 /* Extention + IUAlertController.swift in Sources */,
+				DB177B6E28752AD20001E0E1 /* Extension + IUAlertController.swift in Sources */,
 				DB177B502866CB840001E0E1 /* EnterNumberViewController.swift in Sources */,
 				DB177B66286763CB0001E0E1 /* UserGuessingGameViewController.swift in Sources */,
+				DB2DC8B2287E5FBF008E6EB4 /* StartViewController.swift in Sources */,
 				DB177B4C2866CB840001E0E1 /* AppDelegate.swift in Sources */,
-				DB2DC8AE287AA971008E6EB4 /* Extention + UITextField.swift in Sources */,
+				DB2DC8AE287AA971008E6EB4 /* Extension + UITextField.swift in Sources */,
 				DB177B6B286835340001E0E1 /* GameOptions.swift in Sources */,
 				DB177B4E2866CB840001E0E1 /* SceneDelegate.swift in Sources */,
 				DB177B68286763EA0001E0E1 /* ResultViewController.swift in Sources */,
