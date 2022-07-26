@@ -1,5 +1,5 @@
 //
-//  Extention + IUAlertController.swift
+//  Extension + IUAlertController.swift
 //  GuessingGameApp
 //
 //  Created by Elena Pavlova on 06.07.2022.

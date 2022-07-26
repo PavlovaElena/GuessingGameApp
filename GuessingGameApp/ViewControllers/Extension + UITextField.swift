@@ -1,5 +1,5 @@
 //
-//  Extention + UITextField.swift
+//  Extension + UITextField.swift
 //  GuessingGameApp
 //
 //  Created by Elena Pavlova on 10.07.2022.

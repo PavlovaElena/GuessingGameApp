@@ -43,6 +43,7 @@ class UserGuessingGameViewController: UIViewController {
     @IBAction func userGuessButtonPressed() {
         userTriesCounter += 1
         tryNumberLabel.text = "Try № \(userTriesCounter)"
+        view.endEditing(true)
         
         guard let userGuessString = userGuessTextField.text else { return }
         
@@ -54,6 +55,9 @@ class UserGuessingGameViewController: UIViewController {
         userGuess >= minValue && userGuess <= maxValue
         ? getComputerResponse(about: userGuess)
         : showAlert(withMessage: "Please enter a number from \(minValue) to \(maxValue)")
+        
+        userGuessTextField.text = ""
+        
     }
     
     @objc private func editingChanged() {

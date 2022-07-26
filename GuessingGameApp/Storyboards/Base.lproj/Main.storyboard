@@ -157,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="DlC-9f-cTT">
-                                <rect key="frame" x="113" y="540.66666666666663" width="188" height="93"/>
+                                <rect key="frame" x="121" y="540.66666666666663" width="172" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My number is ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpY-um-PlY">
                                         <rect key="frame" x="0.0" y="0.0" width="143.66666666666666" height="24"/>
@@ -165,56 +165,38 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-z8-Zyf">
-                                        <rect key="frame" x="0.0" y="49" width="188" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-z8-Zyf">
+                                        <rect key="frame" x="0.0" y="49" width="172" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22q-5V-Mxi">
                                                 <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="44"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="&lt;">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="mVd-w0-P56"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVt-pj-Dcu">
-                                                <rect key="frame" x="74.333333333333343" y="0.0" width="39.333333333333343" height="44"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="66.333333333333343" y="0.0" width="39.333333333333343" height="44"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="=">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="pNZ-bt-8ua"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzV-DC-99K">
-                                                <rect key="frame" x="148.66666666666669" y="0.0" width="39.333333333333343" height="44"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="132.66666666666666" y="0.0" width="39.333333333333343" height="44"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="&gt;">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="userAnswerButtonPressed:" destination="d5y-br-qsQ" eventType="touchUpInside" id="e6S-ce-8Cm"/>
                                                 </connections>
@@ -264,6 +246,9 @@
                     <connections>
                         <outlet property="computerQuestionLabel" destination="GSU-EK-BZ6" id="39x-mM-LLm"/>
                         <outlet property="tryNumberLabel" destination="jsQ-S8-HXs" id="VPP-CQ-pCB"/>
+                        <outletCollection property="userAnswerButtons" destination="22q-5V-Mxi" collectionClass="NSMutableArray" id="DMa-M5-W3I"/>
+                        <outletCollection property="userAnswerButtons" destination="mVt-pj-Dcu" collectionClass="NSMutableArray" id="c1M-Kt-Ls8"/>
+                        <outletCollection property="userAnswerButtons" destination="SzV-DC-99K" collectionClass="NSMutableArray" id="Xap-Ya-nSh"/>
                         <segue destination="kZh-CL-6TC" kind="presentation" identifier="showUserGuessing" modalPresentationStyle="fullScreen" id="Crc-bE-gQm"/>
                     </connections>
                 </viewController>
@@ -403,7 +388,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-ij-7w8">
                                         <rect key="frame" x="0.0" y="128" width="288" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

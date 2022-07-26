@@ -12,6 +12,8 @@ class ComputerGuessingGameViewController: UIViewController {
     @IBOutlet weak var computerQuestionLabel: UILabel!
     @IBOutlet weak var tryNumberLabel: UILabel!
     
+    @IBOutlet var userAnswerButtons: [UIButton]!
+    
     var gameOptions: GameOptions!
     
     private var computerTriesCounter = 1
@@ -24,6 +26,12 @@ class ComputerGuessingGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tryNumberLabel.text = "Try № \(computerTriesCounter)"
+        
+        for button in userAnswerButtons {
+            button.layer.borderWidth = 1.5
+            button.layer.borderColor = UIColor.black.cgColor
+            button.layer.cornerRadius = 10
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
