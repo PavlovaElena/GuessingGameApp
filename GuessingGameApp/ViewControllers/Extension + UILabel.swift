@@ -9,9 +9,11 @@ import UIKit
 
 extension UILabel {
     func animation(typing answer: String){
-        for char in answer {
-            text?.append(char)
-            RunLoop.current.run(until: Date() + 0.07)
+        DispatchQueue.main.async {
+            for char in answer {
+                self.text?.append(char)
+                RunLoop.current.run(until: Date() + 0.07)
+            }
         }
     }
 }
