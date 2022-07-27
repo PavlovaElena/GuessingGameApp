@@ -67,7 +67,7 @@ class ComputerGuessingGameViewController: UIViewController {
     
     @IBAction func remindButtonPressed() {
         let alert = UIAlertController.createAlertController(
-            title: "Oops",
+            title: "Reminder",
             message: "You guessed the number \(gameOptions.userNumber)"
         )
         present(alert, animated: true)
